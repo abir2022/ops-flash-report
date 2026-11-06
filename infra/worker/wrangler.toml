@@ -1,0 +1,15 @@
+name = "ops-flash-freshness"
+main = "src/index.ts"
+compatibility_date = "2024-09-01"
+
+# Watchdog: alerts if the ETL hasn't published a successful run recently.
+# Runs every 30 minutes.
+[triggers]
+crons = ["*/30 * * * *"]
+
+[vars]
+# Set via `wrangler secret put` (not here):
+#   SUPABASE_URL
+#   SUPABASE_SERVICE_ROLE_KEY
+#   ALERT_WEBHOOK_URL (Teams/Slack/Discord generic webhook)
+STALE_HOURS = "12"

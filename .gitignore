@@ -1,0 +1,56 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# ---- Node ----
+node_modules/
+apps/web/dist/
+*.local
+*.tsbuildinfo
+apps/web/vite.config.js
+apps/web/vite.config.d.ts
+
+# ---- Env / secrets (NEVER commit) ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+service-account*.json
+
+# ---- Supabase ----
+supabase/.temp/
+
+# ---- Cloudflare ----
+.wrangler/
+infra/worker/.dev.vars
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ---- Dropbox/OneDrive sync conflict artifacts (NEVER commit) ----
+* (conflict *
+
+# ---- Data dumps (local test artifacts) ----
+*.db
+*.sqlite3
+data/*.csv
+!apps/etl/tests/fixtures/*.csv
+
+# ---- ETL runtime logs ----
+apps/etl/logs/
