@@ -21,7 +21,7 @@ describe("factorAnalysis reconciliation", () => {
   });
   it("net cost = at-risk − recoverable", () => {
     expect(NET_COST).toBe(GROUP.atRisk - GROUP.recoverable);
-    expect(NET_COST).toBe(431);
+    expect(NET_COST).toBe(144);
   });
   it("has exactly 15 SBU plans", () => {
     expect(SBU_PLANS).toHaveLength(15);

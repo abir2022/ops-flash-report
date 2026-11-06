@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { supabase } from "./lib/supabase";
+import { supabase, DEMO_MODE } from "./lib/supabase";
 import { fetchEmployeeProfile, fetchReportDates } from "./api/client";
 import { FreshnessBadge } from "./components/FreshnessBadge";
 import { Glossary } from "./components/Glossary";
@@ -216,8 +216,15 @@ export default function App() {
             </p>
           </div>
           <div className="header-actions">
-            <span className="chip chip-demo" title="Portfolio demo — every figure is synthetic">
-              Synthetic demo data
+            <span
+              className="chip chip-demo"
+              title={
+                DEMO_MODE
+                  ? "DEMO MODE — zero backend; every figure is in-memory and synthetic"
+                  : "Portfolio demo — every figure is synthetic"
+              }
+            >
+              {DEMO_MODE ? "DEMO MODE — in-memory data" : "Synthetic demo data"}
             </span>
             <Glossary />
             <ThemeToggle />
@@ -449,8 +456,15 @@ function EmployeeView({
             </p>
           </div>
           <div className="header-actions">
-            <span className="chip chip-demo" title="Portfolio demo — every figure is synthetic">
-              Synthetic demo data
+            <span
+              className="chip chip-demo"
+              title={
+                DEMO_MODE
+                  ? "DEMO MODE — zero backend; every figure is in-memory and synthetic"
+                  : "Portfolio demo — every figure is synthetic"
+              }
+            >
+              {DEMO_MODE ? "DEMO MODE — in-memory data" : "Synthetic demo data"}
             </span>
             <ThemeToggle />
             <UserMenu

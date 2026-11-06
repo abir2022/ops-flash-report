@@ -27,7 +27,7 @@ export const FACTORS: FactorInfo[] = [
   { key: "duty", name: "Import duty", short: "Import duty", down: 40, mit: -32, sav: 71, driver: "Import duty" },
 ];
 
-export const GROUP = { rev: 3091, atRisk: 1269, recoverable: 838 };
+export const GROUP = { rev: 3091, atRisk: 423, recoverable: 279 };
 export const NET_COST = GROUP.atRisk - GROUP.recoverable; // 144 Cr
 
 // Per-SBU factor exposure (0–100), keyed by SBU code.

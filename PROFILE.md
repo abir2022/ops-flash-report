@@ -56,6 +56,12 @@ source systems (ERP/portal/sheets)
 - Campaign submissions feeding ROMI analysis with an editable survey form.
 - On-demand "refresh" button handled by an ETL agent polling a DB queue.
 - Watchdog cron worker alerting to email/Teams webhook on stall or failure.
+- **DEMO MODE (zero-env)** — with no `VITE_*` env set, the SPA boots against an
+  in-memory supabase-js shim (`apps/web/src/lib/demo/`) seeded with synthetic
+  NexaGroup fixtures: every tab renders numbers/charts, any password signs in,
+  writes succeed in-memory only, and a "DEMO MODE — in-memory data" chip keeps
+  it honest. This makes the repo deployable to Vercel with zero configuration;
+  setting the two env vars restores the real Supabase path untouched.
 
 ## Tech stack
 

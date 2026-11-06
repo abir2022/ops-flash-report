@@ -59,13 +59,24 @@ in-app admin panel to create guest links and officer/employee users (RPCs in
 ```bash
 cd apps/web
 npm install
-cp .env.example .env        # VITE_SUPABASE_URL + VITE_SUPABASE_ANON_KEY
-npm run dev                 # http://localhost:5173
+npm run dev                 # zero-env → boots in DEMO MODE (in-memory data)
 npm test && npm run build
 ```
 
+With **no** env vars set, `src/lib/supabase.ts` detects the missing
+`VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY`, exports an in-memory
+supabase-js shim (`src/lib/demo/`) with synthetic fixtures, sets
+`DEMO_MODE = true`, and the SPA renders every tab without a backend — ready to
+deploy to Vercel as-is. To run against a real Supabase instead:
+
+```bash
+cp .env.example .env        # VITE_SUPABASE_URL + VITE_SUPABASE_ANON_KEY
+npm run dev                 # http://localhost:5173 (Supabase path)
+```
+
 Deploys to Vercel with the Vite preset (build `npm run build`, output `dist`).
-Set the two `VITE_*` env vars in the Vercel project.
+The zero-env deploy shows the DEMO MODE chip; setting the two `VITE_*` env
+vars switches to the Supabase path automatically.
 
 ### 3. ETL (optional; demo sources)
 

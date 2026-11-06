@@ -21,9 +21,32 @@ session glue, and the same payload powers the PDF export.
 
 ```bash
 npm install
-cp .env.example .env        # set VITE_SUPABASE_URL + VITE_SUPABASE_ANON_KEY
-npm run dev                 # http://localhost:5173
+npm run dev                 # zero-config demo — no env needed, opens in DEMO MODE
 ```
+
+To run against a real backend instead, add a `.env`:
+
+```bash
+cp .env.example .env        # set VITE_SUPABASE_URL + VITE_SUPABASE_ANON_KEY
+npm run dev                 # http://localhost:5173 (Supabase path)
+```
+
+## Demo mode (zero env)
+
+When `VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY` are **not** set (e.g. a
+zero-env Vercel deploy), `src/lib/supabase.ts` exports an in-memory
+supabase-js shim (`src/lib/demo/`) and sets `DEMO_MODE = true`. The app boots
+straight to the admin dashboard with every tab populated — KPIs, charts,
+scorecards, marketing/ROMI, BIIR and the admin employee CRUD — backed entirely
+by deterministic synthetic fixtures, no network calls, no throw at import.
+
+- The query-builder surface used by the app is emulated: `.from(t).select().eq().in().order().limit().single()/maybeSingle()`, `.insert/.update/.delete`, plus `rpc(...)` for every stored proc and the `auth` API (`getSession`, `signInWithPassword`, `signOut`, `onAuthStateChange`).
+- Sign-in accepts **any** email/password; mutations (edit employee, submit
+  campaign, save survey form) succeed against in-memory state only and reset on
+  reload.
+- A "DEMO MODE — in-memory data" chip in the header makes the mode explicit.
+- When the env vars **are** present, the real Supabase path runs unchanged and
+  the chip reads "Synthetic demo data".
 
 ## What's inside
 
@@ -74,9 +97,11 @@ included — `.env.example` values are placeholders.
 ## Deploy
 
 Import the repo on Vercel, set the root directory to `apps/web`; the Vite
-preset is auto-detected (build `npm run build`, output `dist`). Add
-`VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in Project → Environment
-Variables, then point a Supabase project at `../../supabase/schema.sql`.
+preset is auto-detected (build `npm run build`, output `dist`). With **no**
+environment variables set it deploys straight into DEMO MODE (in-memory
+synthetic data). To wire the real backend, add `VITE_SUPABASE_URL` and
+`VITE_SUPABASE_ANON_KEY` in Project → Environment Variables, then point a
+Supabase project at `../../supabase/schema.sql`.
 
 ## License
 
