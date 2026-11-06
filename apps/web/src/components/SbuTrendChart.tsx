@@ -81,8 +81,8 @@ export function SbuTrendChart({
             itemStyle={c.itemStyle}
             formatter={(v: number) => [fmt(v), "Daily Cr"]}
           />
-          <Bar dataKey="daily" fill="#38bdf8" radius={[3, 3, 0, 0]} />
-          <Line type="monotone" dataKey="daily" stroke="#fbbf24" strokeWidth={2} dot={{ r: 3 }} />
+          <Bar dataKey="daily" fill="#3B82F6" radius={[3, 3, 0, 0]} />
+          <Line type="monotone" dataKey="daily" stroke="#D97706" strokeWidth={2} dot={{ r: 3 }} />
         </ComposedChart>
       </ResponsiveContainer>
     </div>

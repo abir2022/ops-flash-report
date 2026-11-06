@@ -12,9 +12,9 @@ import { buildDecisionPoints, type DecisionSeverity } from "../../lib/decisionPo
 import { num } from "../../lib/format";
 
 const SEV_COLOR: Record<DecisionSeverity, string> = {
-  Action: "#f87171",
-  Watch: "#fbbf24",
-  Good: "#4ade80",
+  Action: "#DC2626",
+  Watch: "#F59E0B",
+  Good: "#10B981",
 };
 
 export function DecisionPointsCard({

@@ -48,12 +48,12 @@ export function PortfolioTrend({ reportDate }: { reportDate: string }) {
               formatter={(v: number) => [fmt(v), "Cr"]}
             />
             {reportDate && (
-              <ReferenceLine x={reportDate.slice(5)} stroke="#fbbf24" strokeDasharray="4 3" />
+              <ReferenceLine x={reportDate.slice(5)} stroke="#D97706" strokeDasharray="4 3" />
             )}
             <Line
               type="monotone"
               dataKey="total"
-              stroke="#38bdf8"
+              stroke="#3B82F6"
               strokeWidth={2.5}
               dot={{ r: 2.5 }}
               activeDot={{ r: 4 }}

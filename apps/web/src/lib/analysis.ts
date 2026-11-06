@@ -44,14 +44,14 @@ export function parameter(key: ParamKey): Parameter {
 }
 
 // One color per quadrant (not per SBU) so the matrix color actually means
-// something and is legend-able. Green = strong, amber = at risk, cyan = stable,
-// red = weak.
+// something and is legend-able. Green = strong, amber = at risk, blue = stable,
+// red = weak — the spec palette's status hues (no violet, no cyan drift).
 export function quadrantColor(q: Quadrant): string {
   switch (q) {
-    case "Star": return "#4ade80";
-    case "Question Mark": return "#fbbf24";
-    case "Cash Cow": return "#38bdf8";
-    default: return "#f87171";
+    case "Star": return "#10B981";
+    case "Question Mark": return "#F59E0B";
+    case "Cash Cow": return "#3B82F6";
+    default: return "#DC2626";
   }
 }
 

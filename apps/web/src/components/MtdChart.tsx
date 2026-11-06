@@ -59,11 +59,11 @@ export function MtdChart({ reportDate }: { reportDate: string }) {
             />
             <ReferenceLine
               x={max}
-              stroke="#fbbf24"
+              stroke="#D97706"
               strokeDasharray="4 3"
-              label={{ value: `Max ${fmt(max)}`, fill: "#fbbf24", fontSize: 10 }}
+              label={{ value: `Max ${fmt(max)}`, fill: "#D97706", fontSize: 10 }}
             />
-            <Bar dataKey="mtd" fill="#38bdf8" radius={[0, 4, 4, 0]} isAnimationActive={!exportMode}>
+            <Bar dataKey="mtd" fill="#3B82F6" radius={[0, 4, 4, 0]} isAnimationActive={!exportMode}>
               <LabelList
                 dataKey="mtd"
                 position="right"

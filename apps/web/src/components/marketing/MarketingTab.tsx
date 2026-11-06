@@ -161,7 +161,7 @@ function SpendTrend({
             itemStyle={c.itemStyle}
             formatter={(v: number) => [fmt(v), "Cr"]}
           />
-          <Line type="monotone" dataKey="value" stroke="#fbbf24" strokeWidth={2} dot={false} />
+          <Line type="monotone" dataKey="value" stroke="#D97706" strokeWidth={2} dot={false} />
         </LineChart>
       </ResponsiveContainer>
     </div>

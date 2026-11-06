@@ -5,12 +5,12 @@ import { chartTheme, useTheme } from "../lib/chartTheme";
 import { useExportMode } from "../lib/exportMode";
 
 const COLORS: Record<string, string> = {
-  "Strong +": "#4ade80",
-  Positive: "#86efac",
-  Neutral: "#fbbf24",
-  Weak: "#f97316",
-  Negative: "#f87171",
-  "N/A": "#64748b",
+  "Strong +": "#10B981",
+  Positive: "#34D399",
+  Neutral: "#F59E0B",
+  Weak: "#D97706",
+  Negative: "#DC2626",
+  "N/A": "#94A3B8",
 };
 
 const ORDER = ["Strong +", "Positive", "Neutral", "Weak", "Negative", "N/A"];

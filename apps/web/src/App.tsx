@@ -216,6 +216,9 @@ export default function App() {
             </p>
           </div>
           <div className="header-actions">
+            <span className="chip chip-demo" title="Portfolio demo — every figure is synthetic">
+              Synthetic demo data
+            </span>
             <Glossary />
             <ThemeToggle />
             <FreshnessBadge />
@@ -342,8 +345,11 @@ export default function App() {
       )}
 
       <footer>
-        Powered by Ops Flash Report Engine v2 · DWH GL 3010001–3010006 ·
-        Supabase Postgres · Cloudflare Pages
+        <span>
+          Methodology: <a href="#flash-recon">GL 3010001–3010006 revenue reconciliation</a> ·
+          Ops Flash Report Engine v2 · Supabase Postgres · Cloudflare Pages
+        </span>
+        <span className="footer-credit">Built by Abir · synthetic portfolio demo</span>
       </footer>
 
       <ExportDialog
@@ -443,6 +449,9 @@ function EmployeeView({
             </p>
           </div>
           <div className="header-actions">
+            <span className="chip chip-demo" title="Portfolio demo — every figure is synthetic">
+              Synthetic demo data
+            </span>
             <ThemeToggle />
             <UserMenu
               email={email}
@@ -502,7 +511,11 @@ function EmployeeView({
       ) : null}
 
       <footer>
-        Powered by Ops Flash Report Engine v2 · Supabase Postgres · Cloudflare Pages
+        <span>
+          Methodology: revenue net of returns, GL 3010001–3010006 sub-schedule ·
+          Ops Flash Report Engine v2 · Supabase Postgres
+        </span>
+        <span className="footer-credit">Built by Abir · synthetic portfolio demo</span>
       </footer>
 
       {exportScope === "employee" && (

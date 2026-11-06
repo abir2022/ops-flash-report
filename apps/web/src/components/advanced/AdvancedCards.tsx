@@ -66,10 +66,10 @@ export function TrendCard({ points }: { points: DailyPoint[] }) {
             itemStyle={c.itemStyle}
             formatter={(v: number) => [fmt(v), "Cr"]}
           />
-          <Bar dataKey="value" fill="#38bdf8" radius={[3, 3, 0, 0]}>
+          <Bar dataKey="value" fill="#3B82F6" radius={[3, 3, 0, 0]}>
             <LabelList dataKey="value" position="top" fill={c.barLabel} fontSize={10} formatter={(v: number) => fmt(v, 0)} />
           </Bar>
-          <Line type="monotone" dataKey="value" stroke="#fbbf24" strokeWidth={2} dot={false} />
+          <Line type="monotone" dataKey="value" stroke="#D97706" strokeWidth={2} dot={false} />
         </ComposedChart>
       </ResponsiveContainer>
     </div>
@@ -82,7 +82,7 @@ export function TrendCard({ points }: { points: DailyPoint[] }) {
 export function WeekdayCard({ points }: { points: DailyPoint[] }) {
   const c = chartTheme(useTheme());
   const rows = weekdayIndex(points);
-  const data = rows.map((r) => ({ ...r, fill: r.index >= 100 ? "#4ade80" : "#f87171" }));
+  const data = rows.map((r) => ({ ...r, fill: r.index >= 100 ? "#10B981" : "#DC2626" }));
   return (
     <div className="chart-canvas">
       <ResponsiveContainer width="100%" height={220}>
@@ -113,13 +113,13 @@ export function WeekdayCard({ points }: { points: DailyPoint[] }) {
 // ---------------------------------------------------------------------------
 // SKU ABC / Pareto — concentration table + cumulative curve.
 // ---------------------------------------------------------------------------
-const CLS_COLOR: Record<string, string> = { A: "#4ade80", B: "#fbbf24", C: "#f87171" };
+const CLS_COLOR: Record<string, string> = { A: "#10B981", B: "#F59E0B", C: "#DC2626" };
 
 const BCG_COLOR: Record<BcgQuadrant, string> = {
-  Star: "#4ade80",
-  "Question Mark": "#fbbf24",
-  "Cash Cow": "#38bdf8",
-  Dog: "#f87171",
+  Star: "#10B981",
+  "Question Mark": "#F59E0B",
+  "Cash Cow": "#3B82F6",
+  Dog: "#DC2626",
 };
 
 function BcgPanel({ matrix }: { matrix: BcgMatrix }) {
@@ -357,9 +357,9 @@ export function SkuAbcCard({ items, prior }: { items: SkuItem[]; prior: Map<numb
               itemStyle={c.itemStyle}
               formatter={(v: number) => [`${v.toFixed(1)}%`, "Cumulative"]}
             />
-            <ReferenceLine y={80} stroke="#4ade80" strokeDasharray="4 4" />
-            <ReferenceLine y={95} stroke="#fbbf24" strokeDasharray="4 4" />
-            <Line type="monotone" dataKey="cumulativeShare" stroke="#38bdf8" strokeWidth={2} dot={false} />
+            <ReferenceLine y={80} stroke="#10B981" strokeDasharray="4 4" />
+            <ReferenceLine y={95} stroke="#F59E0B" strokeDasharray="4 4" />
+            <Line type="monotone" dataKey="cumulativeShare" stroke="#3B82F6" strokeWidth={2} dot={false} />
           </ComposedChart>
         </ResponsiveContainer>
       </div>

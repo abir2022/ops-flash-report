@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { BD_DIVISIONS, BD_MAP_VIEWBOX } from "../../lib/bdDivisions";
 
-const COLOR_NONE = "#e9eef3";
-const COLOR_LOW = "#7fb2dd";
-const COLOR_MID = "#2E74B5";
-const COLOR_HIGH = "#1F4E78";
+// Sequential blue ramp from the spec palette (no violet, no off-system hues).
+const COLOR_NONE = "#CBD5E1";
+const COLOR_LOW = "#93C5FD";
+const COLOR_MID = "#3B82F6";
+const COLOR_HIGH = "#1E40AF";
 
 function colorFor(value: number, max: number): string {
   if (max <= 0 || value <= 0) return COLOR_NONE;

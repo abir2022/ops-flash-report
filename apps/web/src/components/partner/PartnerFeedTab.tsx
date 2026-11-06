@@ -93,7 +93,7 @@ function DailyTrend({ points }: { points: DailyPoint[] }) {
             itemStyle={c.itemStyle}
             formatter={(v: number) => [fmt(v), "Cr"]}
           />
-          <Line type="monotone" dataKey="value" stroke="#38bdf8" strokeWidth={2} dot={false} />
+          <Line type="monotone" dataKey="value" stroke="#3B82F6" strokeWidth={2} dot={false} />
         </LineChart>
       </ResponsiveContainer>
     </div>

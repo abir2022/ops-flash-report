@@ -103,17 +103,17 @@ export function FactorCostRadar() {
                 itemStyle={c.itemStyle}
                 formatter={(v: number) => [`${fmt(v, 0)} Cr`]}
               />
-              <Bar dataKey="down" name="Cost if nothing" fill="#f87171" radius={[3, 3, 0, 0]}>
+              <Bar dataKey="down" name="Cost if nothing" fill="#DC2626" radius={[3, 3, 0, 0]}>
                 <LabelList dataKey="down" position="top" fill={c.barLabel} fontSize={10} formatter={(v: number) => fmt(v, 0)} />
               </Bar>
-              <Bar dataKey="mit" name="Cost after action" fill="#fbbf24" radius={[3, 3, 0, 0]}>
+              <Bar dataKey="mit" name="Cost after action" fill="#F59E0B" radius={[3, 3, 0, 0]}>
                 <LabelList dataKey="mit" position="top" fill={c.barLabel} fontSize={10} formatter={(v: number) => (v ? fmt(v, 0) : "")} />
               </Bar>
-              <Bar dataKey="upside" name="Duty upside" fill="#4ade80" radius={[3, 3, 0, 0]}>
+              <Bar dataKey="upside" name="Duty upside" fill="#10B981" radius={[3, 3, 0, 0]}>
                 {data.map((d) => (
-                  <Cell key={d.label} fill={d.upside > 0 ? "#4ade80" : "transparent"} />
+                  <Cell key={d.label} fill={d.upside > 0 ? "#10B981" : "transparent"} />
                 ))}
-                <LabelList dataKey="upside" position="top" fill="#16a34a" fontSize={10} formatter={(v: number) => (v ? `+${fmt(v, 0)}` : "")} />
+                <LabelList dataKey="upside" position="top" fill="#34D399" fontSize={10} formatter={(v: number) => (v ? `+${fmt(v, 0)}` : "")} />
               </Bar>
             </BarChart>
           </ResponsiveContainer>

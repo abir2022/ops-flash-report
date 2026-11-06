@@ -346,16 +346,16 @@ function BranchMarkChart({
             itemStyle={c.itemStyle}
             formatter={(v) => `${fmt(Number(v), 2)}×`}
           />
-          <Bar dataKey="actual" name="Actual" fill="#2563eb" radius={[3, 3, 0, 0]} />
-          <Bar dataKey="mark" name="Mark (≥)" fill="#f59e0b" radius={[3, 3, 0, 0]} />
+          <Bar dataKey="actual" name="Actual" fill="#3B82F6" radius={[3, 3, 0, 0]} />
+          <Bar dataKey="mark" name="Mark (≥)" fill="#D97706" radius={[3, 3, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
       <div className="mk-chart-legend">
         <span>
-          <i style={{ background: "#2563eb" }} /> Actual
+          <i style={{ background: "#3B82F6" }} /> Actual
         </span>
         <span>
-          <i style={{ background: "#f59e0b" }} /> Mark (≥)
+          <i style={{ background: "#D97706" }} /> Mark (≥)
         </span>
       </div>
     </div>

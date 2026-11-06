@@ -190,13 +190,13 @@ export function ForecastCard({ sbuId, channel }: { sbuId: number; channel: strin
               itemStyle={c.itemStyle}
               formatter={(v: number, name: string) => [fmt(v), `${name} (Cr)`]}
             />
-            <Bar dataKey="forecast" name="Forecast" fill="#a78bfa" fillOpacity={0.55} radius={[3, 3, 0, 0]}>
+            <Bar dataKey="forecast" name="Forecast" fill="#60A5FA" fillOpacity={0.55} radius={[3, 3, 0, 0]}>
               <LabelList dataKey="forecast" position="top" fill={c.barLabel} fontSize={10} formatter={(v: number) => (v ? fmt(v, 0) : "")} />
             </Bar>
-            <Bar dataKey="actual" name="Actual" fill="#38bdf8" radius={[3, 3, 0, 0]}>
+            <Bar dataKey="actual" name="Actual" fill="#3B82F6" radius={[3, 3, 0, 0]}>
               <LabelList dataKey="actual" position="top" fill={c.barLabel} fontSize={10} formatter={(v: number) => (v ? fmt(v, 0) : "")} />
             </Bar>
-            <Line type="monotone" dataKey="target" name="Target" stroke="#fbbf24" strokeWidth={2} dot={false} />
+            <Line type="monotone" dataKey="target" name="Target" stroke="#D97706" strokeWidth={2} dot={false} />
             <ReferenceLine y={0} stroke={c.axis} />
           </ComposedChart>
         </ResponsiveContainer>

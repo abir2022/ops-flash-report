@@ -39,9 +39,9 @@ export function classifyRisk(score: number): RiskClass {
 }
 
 export const RISK_COLOR: Record<RiskClass, string> = {
-  Low: "#4ade80",
-  Medium: "#fbbf24",
-  Critical: "#f87171",
+  Low: "#10B981",
+  Medium: "#F59E0B",
+  Critical: "#DC2626",
 };
 
 // ---- External signals -------------------------------------------------------

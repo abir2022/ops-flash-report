@@ -89,10 +89,10 @@ export const VERDICT_LABEL: Record<Verdict, string> = {
 };
 
 export const VERDICT_COLOR: Record<Verdict, string> = {
-  Grow: "#4ade80",
-  Protect: "#38bdf8",
-  Fix: "#fbbf24",
-  Review: "#f87171",
+  Grow: "#10B981",
+  Protect: "#3B82F6",
+  Fix: "#F59E0B",
+  Review: "#DC2626",
 };
 
 export const HEALTH_LABEL: Record<Health, string> = { Strong: "Strong", Fair: "Fair", Weak: "Weak" };
@@ -107,7 +107,7 @@ const RISK: Record<string, [number, number]> = {
 
 const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
   {
-    code: "NXES", name: "NexaGroup Essentials", industry: "FMCG / Staples", color: "#f0d47a", rev: 1105, np: -60,
+    code: "NXES", name: "NexaGroup Essentials", industry: "FMCG / Staples", color: "#3B82F6", rev: 1105, np: -60,
     health: "Fair", headwind: "Medium", verdict: "Fix",
     situation: "Our biggest business (1,105 Cr revenue) but it is losing money (−60 Cr).",
     rootCause: "Imported raw materials, a very large 69 Cr borrowing (finance) bill, and a packaging-tax risk are squeezing the margin.",
@@ -122,7 +122,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Net profit turns positive by FY27; borrowing cost below 4% of revenue.",
   },
   {
-    code: "NXCM", name: "NexaGroup Cement", industry: "Cement", color: "#3b82f6", rev: 756, np: 62,
+    code: "NXCM", name: "NexaGroup Cement", industry: "Cement", color: "#D97706", rev: 756, np: 62,
     health: "Strong", headwind: "Low", verdict: "Protect",
     situation: "Strong and profitable (62 Cr) but margin is eroding (−3.3 pp) from clinker duty and energy cost.",
     rootCause: "The 25% value-based clinker import duty plus coal/power cost are the two biggest cost leaks.",
@@ -137,7 +137,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Hold net-profit margin; clinker landed cost per ton falling.",
   },
   {
-    code: "NXST", name: "NexaGroup Steel", industry: "Steel", color: "#22d3ee", rev: 483, np: 70,
+    code: "NXST", name: "NexaGroup Steel", industry: "Steel", color: "#10B981", rev: 483, np: 70,
     health: "Strong", headwind: "Medium", verdict: "Protect",
     situation: "Profitable (70 Cr) but margin is under heavy pressure (−9.2 pp ramp) from energy and scrap cost.",
     rootCause: "Imported scrap (the largest input), furnace energy, and the Taka all feed into one cost channel.",
@@ -152,7 +152,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Melt yield up; energy cost per ton down.",
   },
   {
-    code: "NXAF", name: "NexaGroup Feed", industry: "Animal Feed / Agro", color: "#22c55e", rev: 313, np: -11,
+    code: "NXAF", name: "NexaGroup Feed", industry: "Animal Feed / Agro", color: "#60A5FA", rev: 313, np: -11,
     health: "Fair", headwind: "Medium", verdict: "Fix",
     situation: "313 Cr revenue but a 11 Cr loss — feed margin is squeezed by input cost.",
     rootCause: "~70% of cost is imported soybean meal / maize, so the Taka and world grain prices dominate.",
@@ -167,7 +167,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Gross margin % and input cost per kg.",
   },
   {
-    code: "NXAL", name: "NexaGroup Commodities", industry: "Commodity Trading", color: "#f59e0b", rev: 196, np: -43,
+    code: "NXAL", name: "NexaGroup Commodities", industry: "Commodity Trading", color: "#FBBF24", rev: 196, np: -43,
     health: "Weak", headwind: "High", verdict: "Fix",
     situation: "196 Cr revenue but a 43 Cr loss — cost of goods is higher than revenue.",
     rootCause: "Thin trading margin is below the borrowing cost, and the rice-mill (NXHM) business is bleeding (−22 Cr).",
@@ -182,7 +182,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Trading margin above borrowing cost; NXHM loss closed.",
   },
   {
-    code: "NXRM", name: "NexaGroup ReadyMix", industry: "Ready-mix Concrete", color: "#a78bfa", rev: 124, np: 0,
+    code: "NXRM", name: "NexaGroup ReadyMix", industry: "Ready-mix Concrete", color: "#34D399", rev: 124, np: 0,
     health: "Fair", headwind: "Medium", verdict: "Protect",
     situation: "Solid business (124 Cr) with a thin operating margin.",
     rootCause: "Transit-mixer fuel cost, builder credit overdues, and a weak public-construction market.",
@@ -197,7 +197,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Fuel cost per cubic meter; overdue receivables.",
   },
   {
-    code: "Lubex", name: "Lubex (Lube Oil & Bitumen)", industry: "Lubricants / Bitumen", color: "#d4af37", rev: 41, np: 2,
+    code: "Lubex", name: "Lubex (Lube Oil & Bitumen)", industry: "Lubricants / Bitumen", color: "#3B82F6", rev: 41, np: 2,
     health: "Weak", headwind: "High", verdict: "Protect",
     situation: "Small but profitable (2 Cr) — yet directly exposed to the oil price.",
     rootCause: "Base oil is crude-linked, so every oil spike hits the cost of the core product.",
@@ -212,7 +212,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Base-oil cost per liter vs market; blend margin.",
   },
   {
-    code: "NXLE", name: "NexaGroup Light Eng (Enovar)", industry: "Light Engineering", color: "#f0d47a", rev: 46, np: -1,
+    code: "NXLE", name: "NexaGroup Light Eng (Enovar)", industry: "Light Engineering", color: "#D97706", rev: 46, np: -1,
     health: "Fair", headwind: "Medium", verdict: "Protect",
     situation: "46 Cr revenue, roughly at break-even.",
     rootCause: "Imported copper / aluminium / components plus energy cost.",
@@ -227,7 +227,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Component localization %; energy cost per unit.",
   },
   {
-    code: "ALCL", name: "NEXAGROUP Pharmacy / PartnerFeed", industry: "Healthcare / Pharmacy", color: "#22c55e", rev: 11, np: 0,
+    code: "ALCL", name: "NEXAGROUP Pharmacy / PartnerFeed", industry: "Healthcare / Pharmacy", color: "#10B981", rev: 11, np: 0,
     health: "Fair", headwind: "Medium", verdict: "Protect",
     situation: "Early-stage ramp-up (11 Cr).",
     rootCause: "Imported medicines, cold-chain energy, and network-expansion cost.",
@@ -242,7 +242,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Store-level economics; private-label share.",
   },
   {
-    code: "NXAI", name: "NEXAGROUP Automobile (Tyre)", industry: "Automotive / Tyre", color: "#22d3ee", rev: 5, np: 0,
+    code: "NXAI", name: "NEXAGROUP Automobile (Tyre)", industry: "Automotive / Tyre", color: "#60A5FA", rev: 5, np: 0,
     health: "Weak", headwind: "High", verdict: "Review",
     situation: "Very small (5 Cr), just breaking even in a ramp-up.",
     rootCause: "Oil-based inputs (natural rubber, carbon black) are imported, and the plant is under-utilized.",
@@ -257,7 +257,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Cost per tire; capacity utilization.",
   },
   {
-    code: "ACEL", name: "ORCA (Consumer Electronics)", industry: "Electronics", color: "#3b82f6", rev: 2, np: 0,
+    code: "ACEL", name: "ORCA (Consumer Electronics)", industry: "Electronics", color: "#FBBF24", rev: 2, np: 0,
     health: "Weak", headwind: "High", verdict: "Review",
     situation: "Very small (2 Cr) ramp-up, at break-even.",
     rootCause: "Imported components and a packaging-tax risk, plus weak discretionary demand.",
@@ -272,7 +272,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Component localization %; warranty cost.",
   },
   {
-    code: "AASL", name: "NEXAGROUP Air", industry: "Aviation", color: "#ef4444", rev: 1, np: -5,
+    code: "AASL", name: "NEXAGROUP Air", industry: "Aviation", color: "#94A3B8", rev: 1, np: -5,
     health: "Weak", headwind: "High", verdict: "Review",
     situation: "Deeply loss-making (−5 Cr) on tiny revenue (1 Cr).",
     rootCause: "Jet fuel is ~30% of revenue and is crude-linked; the fleet is in US dollars.",
@@ -287,7 +287,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Load factor; fuel cost % of revenue.",
   },
   {
-    code: "NXMP", name: "Mediplex", industry: "Healthcare / Hospital", color: "#22c55e", rev: 0, np: 0,
+    code: "NXMP", name: "Mediplex", industry: "Healthcare / Hospital", color: "#94A3B8", rev: 0, np: 0,
     health: "Fair", headwind: "Medium", verdict: "Protect",
     situation: "Early ramp-up (0 Cr).",
     rootCause: "High fixed cost and imported equipment while bed occupancy builds up.",
@@ -302,7 +302,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Bed occupancy %; cost per bed.",
   },
   {
-    code: "NXNJ", name: "NextJobs", industry: "HR-tech / SaaS", color: "#a78bfa", rev: 0.2, np: -1,
+    code: "NXNJ", name: "NextJobs", industry: "HR-tech / SaaS", color: "#94A3B8", rev: 0.2, np: -1,
     health: "Strong", headwind: "Low", verdict: "Grow",
     situation: "Tiny revenue (0 Cr) but no import or energy exposure — it is a pure software play.",
     rootCause: "Slow revenue build against fixed product cost (burn rate).",
@@ -317,7 +317,7 @@ const RAW_PLANS: Omit<SbuPlan, "atRisk" | "recoverable">[] = [
     kpi: "Monthly recurring revenue; customer acquisition cost.",
   },
   {
-    code: "NXBO", name: "NXBO", industry: "Enterprise Software / SaaS", color: "#22d3ee", rev: 8, np: -1,
+    code: "NXBO", name: "NXBO", industry: "Enterprise Software / SaaS", color: "#34D399", rev: 8, np: -1,
     health: "Strong", headwind: "Low", verdict: "Grow",
     situation: "Software business (8 Cr) with its own product and the group as captive customer.",
     rootCause: "Implementation cost is high per client, so the software unit economics are weak today.",
