@@ -1,3 +1,5 @@
+![ops-flash-report](assets/banner.svg)
+
 # ops-flash-report
 
 **Operations Flash Report** — a web platform where field managers submit daily
